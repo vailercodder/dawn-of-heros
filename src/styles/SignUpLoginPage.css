@@ -44,7 +44,7 @@ body {
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
-  background-image: url("./img/background.jpg");
+  background-image: url("./img/background-sign.png");
   background-position: center;
   background-size: cover;
 }
