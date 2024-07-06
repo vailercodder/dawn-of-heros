@@ -1,0 +1,55 @@
+.hero-stats {
+  padding: 20px;
+}
+
+.hero-stats-content {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent background */
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero-stats-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.hero-stats-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Bangers", cursive;
+}
+
+.hero-stats-content p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.nickname-update {
+  margin-top: 20px;
+}
+
+.nickname-update input {
+  padding: 8px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.nickname-update button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nickname-update button:hover {
+  background-color: #218838;
+}

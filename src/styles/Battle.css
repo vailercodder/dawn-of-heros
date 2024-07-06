@@ -1,0 +1,79 @@
+.battle-page {
+  padding: 20px;
+  text-align: center;
+  background: url("./img/battle-background.jpg") repeat;
+  min-height: 100vh;
+}
+
+.battle-content {
+  margin-top: 20px;
+}
+
+.battle-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.battle-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.battle-teams,
+.all-teams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.team-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.create-team-button {
+  margin-bottom: 20px;
+}
+
+.create-team-button input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-create-team {
+  width: 150px;
+  background-color: #5995fd;
+  border: 5px solid black;
+  outline: none;
+  height: 49px;
+  border-radius: 49px 5px 49px 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  transform: rotate(2deg);
+  box-shadow: 3px 3px 0 black;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(362deg);
+  }
+}
+
+.btn-create-team:hover {
+  animation: spin 1s linear infinite;
+}

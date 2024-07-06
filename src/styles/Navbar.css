@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Refrigerator+Deluxe+Bold&display=swap");
+
+.nav {
+  background: linear-gradient(to right, rgb(2, 3, 7), rgb(241, 99, 5));
+  padding: 15px 5px;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav_bar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  gap: 50px;
+}
+
+.nav_opt {
+  border-left: 1px solid black;
+  height: 100%;
+}
+
+.nav_opt a,
+.nav_opt button {
+  font-size: 2rem;
+  font-weight: 900;
+  color: black;
+  text-decoration: none;
+  transition: margin-left 0.2s, margin-right 0.2s;
+  transform: rotate(2deg);
+  margin: 15px;
+  padding: 0 5px;
+  float: right;
+  background: #e90909;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
+  font-family: "Refrigerator Deluxe Bold", sans-serif;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav_opt a::before,
+.nav_opt button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffd000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav_opt a:hover::before,
+.nav_opt button:hover::before {
+  transform: scaleX(1);
+}
+
+.nav_opt a:hover,
+.nav_opt button:hover {
+  color: rgb(3, 151, 250);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav_img {
+  height: 30px;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 720px) {
+  .nav {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav_bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav_opt {
+    border-left: 0;
+    border-top: 1px solid black;
+    width: 100%;
+    text-align: center;
+  }
+  .nav_opt a,
+  .nav_opt button {
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+  .nav_img {
+    width: 50px;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .nav_bar {
+    width: 100%;
+  }
+  .nav_opt {
+    border-top: 0;
+    border-bottom: 1px solid black;
+  }
+  .nav_opt:nth-child(odd) { 
+    background-color: rgb(235, 200, 0);
+  }
+  .nav_img {
+    width: 40px;
+  }
+}

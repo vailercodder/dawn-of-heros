@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Refrigerator+Deluxe+Bold&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bangers");
+
+.battle-vs {
+  padding: 20px;
+  text-align: center;
+  background: url("./img/battle-background.jpg") repeat;
+  min-height: 100vh;
+}
+
+.battle-vs-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Make the middle column larger */
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(253, 8, 8, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.battle-vs-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.battle-vs-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-container {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.team-member {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+}
+
+.team-member-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.team-member-details h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.team-member-details p {
+  margin: 5px 0;
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.battle-vs-content .fight-messages {
+  font-family: "Refrigerator Deluxe Bold", sans-serif;
+  color: #333;
+}
+
+.battle-vs-content .special-message {
+  font-family: "Bangers", cursive;
+  color: #d9534f; /* Special color for special messages */
+  font-size: 3.5rem;
+}

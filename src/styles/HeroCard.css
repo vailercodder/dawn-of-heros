@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+.hero-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 300px;
+  text-align: center;
+  background-color: rgb(14, 2, 2);
+  color: rgb(212, 42, 42);
+}
+
+.hero-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-card:hover {
+  transform: scale(1.05);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hero-details {
+  text-align: center;
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  margin: 8px 0;
+  font-family: "Bangers", cursive;
+}
+
+.hero-ability,
+.hero-ability-id,
+.hero-health,
+.hero-power {
+  font-size: 1rem;
+  margin: 4px 0;
+  font-family: "Bangers", cursive;
+  font-size: 30px;
+}
+
+.hero-ability {
+  background-color: yellow;
+  color: black;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.hero-ability-id {
+  background-color: red;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.hero-health {
+  background-color: blue;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.hero-power {
+  background-color: green;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+}

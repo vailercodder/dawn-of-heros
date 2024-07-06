@@ -1,0 +1,61 @@
+.team-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-card-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.team-card-details {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.team-card-name {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.delete-button,
+.fight-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.fight-button {
+  background-color: #2ecc71;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.fight-button:hover {
+  background-color: #27ae60;
+}
