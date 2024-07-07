@@ -49,7 +49,7 @@ const HeroStats = () => {
     try {
       const userHeroDocRef = doc(db, `users/${currentUser.uid}/collection`, id);
       await updateDoc(userHeroDocRef, { nickname });
-      console.log("Nickname updated successfully!");
+      alert("Nickname updated successfully!");
     } catch (error) {
       console.error("Error updating nickname:", error);
     }

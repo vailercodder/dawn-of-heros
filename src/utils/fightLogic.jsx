@@ -16,28 +16,26 @@ const generateMessage = (team1Member, team2Member, team1Name, team2Name) => {
 };
 
 // Handle each turn in the fight
-const takeTurn = (
-  team1Member,
-  team2Member,
-  team1Name,
-  team2Name,
-  isFirstTurn
-) => {
+const takeTurn = (team1Member, team2Member, team1Name, team2Name) => {
   let messages = [];
 
-  if (isFirstTurn) {
-    // Apply special abilities on the first turn
+  // Apply special abilities on the first turn of each member
+  if (!team1Member.hasUsedAbility) {
     applySpecialAbility(team1Member, team2Member);
-    applySpecialAbility(team2Member, team1Member);
-
+    team1Member.hasUsedAbility = true;
     const team1AbilityDesc = getSpecialAbilityDescription(
       team1Member["ability-id"]
     );
-    const team2AbilityDesc = getSpecialAbilityDescription(
-      team2Member["ability-id"]
-    );
     messages.push(
       `Special Ability Used by ${team1Member.name} from ${team1Name}: ${team1AbilityDesc}`
+    );
+  }
+
+  if (!team2Member.hasUsedAbility) {
+    applySpecialAbility(team2Member, team1Member);
+    team2Member.hasUsedAbility = true;
+    const team2AbilityDesc = getSpecialAbilityDescription(
+      team2Member["ability-id"]
     );
     messages.push(
       `Special Ability Used by ${team2Member.name} from ${team2Name}: ${team2AbilityDesc}`
@@ -62,10 +60,15 @@ const takeTurn = (
 // This function will handle the fight logic
 export const createFight = (team1, team2) => {
   // Clone teams to avoid mutating the original data
-  let team1Members = team1.members.map((member) => ({ ...member }));
-  let team2Members = team2.members.map((member) => ({ ...member }));
+  let team1Members = team1.members.map((member) => ({
+    ...member,
+    hasUsedAbility: false,
+  }));
+  let team2Members = team2.members.map((member) => ({
+    ...member,
+    hasUsedAbility: false,
+  }));
 
-  let isFirstTurn = true;
   let messages = [];
 
   const nextTurn = () => {
@@ -82,10 +85,8 @@ export const createFight = (team1, team2) => {
       team1Member,
       team2Member,
       team1.name,
-      team2.name,
-      isFirstTurn
+      team2.name
     );
-    isFirstTurn = false; // Subsequent turns will not apply special abilities
 
     // Generate and store message for this turn
     const specialMessage = generateMessage(
